@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css"
+      rel="stylesheet"
+    />
+    <title>จับคู่ผู้ประกอบการกับนักศึกษาฝึกงาน</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+      }
+      h1 {
+        margin: 0 auto; /* ขยับ h1 ไปที่กลางแนวนอน */
+        text-align: center; /* จัดข้อความใน h1 ไปตรงกลาง */
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        padding: 20px;
+        position: relative; /* เพิ่มเพื่อให้สามารถใช้ position: absolute บน grid-container ได้ */
+      }
+
+      .grid-item {
+        border: 1px solid #ccc;
+        padding: 10px;
+        position: relative;
+      }
+
+      .add-intern-button {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+      }
+      /* กำหนดขนาดเริ่มต้นของรูป */
+      .grid-item img {
+        border-radius: 70%;
+        max-width: 100%;
+        max-height: 100%;
+        width: 50px;
+        height: 50px;
+        transition: transform 0.3s; /* เพิ่ม transition สำหรับการเปลี่ยนแปลงของ transform */
+      }
+
+      /* เมื่อ hover กับ grid-item */
+      .grid-item:hover img {
+        transform: scale(2.2); /* ขยายขนาดรูปภาพเป็น 1.1 เมื่อ hover */
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>จับคู่ผู้ประกอบการกับนักศึกษาฝึกงาน</h1>
+    <div class="grid-container">
+      <!-- เพิ่มตารางสำหรับผู้ประกอบการและปุ่มเพิ่มฝึกงานต่อไป -->
+      <div class="grid-item">
+        <h2>Entrepreneur 1</h2>
+        <p>Ability: Programming</p>
+        <!-- เพิ่มปุ่ม "Add Intern" ตรงนี้ -->
+      </div>
+
+      <div class="grid-item">
+        <h2>Entrepreneur 2</h2>
+        <p>Ability: Marketing</p>
+        <!-- เพิ่มปุ่ม "Add Intern" ตรงนี้ -->
+      </div>
+
+      <div class="grid-item">
+        <h2>Entrepreneur 3</h2>
+        <p>Ability: Design</p>
+        <!-- เพิ่มปุ่ม "Add Intern" ตรงนี้ -->
+      </div>
+
+      <div class="grid-item">
+        <h2>Entrepreneur 4</h2>
+        <p>Ability: Management</p>
+        <!-- เพิ่มปุ่ม "Add Intern" ตรงนี้ -->
+      </div>
+
+      <!-- เพิ่มปุ่ม "Add Intern" ไว้ที่ขวาล่างของเว็บไซต์ -->
+      <button class="add-intern-button">Add Intern</button>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+  </body>
+</html>
